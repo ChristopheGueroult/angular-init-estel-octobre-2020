@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "estel-crm"
+    }
+  },
+  "defaultProject": "estel-crm",
+  "cli": {
+    "analytics": false
+  }
 }
