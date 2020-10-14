@@ -1,8 +1,11 @@
-<div class="bandeau" [ngClass]="{'secondary': secondaryColor}">
-  <h1>{{ title }}</h1>
-  <h2 *ngIf="subtitle">{{ subtitle }}</h2>
-</div>
+<div [ngClass]="{'secondary': secondaryColor}">
 
-<div class="container-fluid">
-  <ng-content></ng-content>
+  <div class="bandeau">
+    <ng-content select=".title"></ng-content>
+  </div>
+
+  <div class="container-fluid">
+    <ng-content></ng-content>
+  </div>
+
 </div>

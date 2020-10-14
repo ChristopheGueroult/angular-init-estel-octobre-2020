@@ -6,8 +6,6 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./template-full-width.component.scss']
 })
 export class TemplateFullWidthComponent implements OnInit {
-  @Input() title: string;
-  @Input() subtitle: string;
   @Input() secondaryColor: boolean;
   constructor() { }
 
