@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { StateOrder } from 'src/app/core/enums/state-order.enum';
 import { Order } from 'src/app/core/models/order';
 import { OrdersService } from 'src/app/core/services/orders.service';
 
@@ -11,6 +11,7 @@ import { OrdersService } from 'src/app/core/services/orders.service';
 export class PageListOrdersComponent implements OnInit {
   public collection: Order[];
   public headers: string[];
+  public states = Object.values(StateOrder);
   constructor(private os: OrdersService) { }
 
   ngOnInit(): void {
@@ -29,6 +30,15 @@ export class PageListOrdersComponent implements OnInit {
       'Totel TTC',
       'State'
     ];
+  }
+
+  public changeState(item: Order, event): void {
+    const state = event.target.value;
+    this.os.changeState(item, state).subscribe((res) => {
+      // gérer les codes d'erreur de l'api
+      item.state = res.state;
+    });
+
   }
 
 }
