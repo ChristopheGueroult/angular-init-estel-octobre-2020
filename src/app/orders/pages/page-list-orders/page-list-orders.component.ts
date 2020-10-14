@@ -13,7 +13,6 @@ export class PageListOrdersComponent implements OnInit {
   public headers: string[];
   public states = Object.values(StateOrder);
   constructor(private os: OrdersService) { }
-
   ngOnInit(): void {
     this.os.collection.subscribe(
       (datas) => {
