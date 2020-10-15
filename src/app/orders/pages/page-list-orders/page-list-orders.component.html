@@ -2,7 +2,7 @@
   <app-text-bandeau class="title">
     <h1>List order</h1>
   </app-text-bandeau>
-  <app-tableau-light *ngIf="collection" [headers]="headers">
+  <app-tableau-light *ngIf="collection$ | async as collection" [headers]="headers">
     <tr *ngFor="let item of collection">
       <td>{{ item.typePresta }}</td>
       <td>{{ item.client }}</td>
@@ -17,6 +17,10 @@
       </td>
     </tr>
   </app-tableau-light>
+
+  <app-button label="Add order" route="add"></app-button>
+  <app-button label="Go to Google" href="http://www.google.fr"></app-button>
+  <app-button label="Open a popup" [action]="true" (clicked)="openPopup()"></app-button>
 
   <app-text-page>
     <h1>un title</h1>

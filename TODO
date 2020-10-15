@@ -1,8 +1,16 @@
 ✔ compodoc @done(20-10-14 11:34)
 ✔ webpack analyzer @done(20-10-14 11:34)
 ✔ router @done(20-10-14 11:34)
-☐ async pipe
-☐ TP clients
+✔ async pipe @done(20-10-15 10:24)
+☐ TP clients (page list clients)
+  ☐ enum state-client
+  ☐ interface client-i
+  ☐ model (simple class) client (val par defaut state ACTIVE et tva 20)
+  ☐ clients-service
+  ☐ page-list-clients
+    ☐ ts recupérer notre collection
+    ☐ html : template-full-width, tableau-dark (name, totalHT, tva, total TTC (réutiliser le pipe total, réutiliser la directive StateDirective), state), text-bandeau, button (add)
 ☐ formulaires
 ☐ TP clients
+☐ emargement et evals formateur
 ☐ Atelier : Subject, BehaviorSubject, EditComponent, Fonction delete

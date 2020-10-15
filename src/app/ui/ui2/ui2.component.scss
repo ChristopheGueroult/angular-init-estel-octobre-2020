@@ -10,4 +10,12 @@ div {
 
 main {
   flex-grow: 1;
+  background: var(--app-darklight);
+}
+
+header {
+  background: var(--app-dark);
+}
+nav {
+  background: var(--app-dark);
 }

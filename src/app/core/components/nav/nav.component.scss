@@ -1,0 +1,10 @@
+ul {
+  width: 100%;
+  a {
+    color: var(--app-dark);
+    border-bottom: 1px solid var(--app-darklight);
+  }
+  a:hover, .active {
+    background: var(--app-darklight);
+  }
+}
