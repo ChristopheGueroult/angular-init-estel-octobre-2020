@@ -2,15 +2,35 @@
 ✔ webpack analyzer @done(20-10-14 11:34)
 ✔ router @done(20-10-14 11:34)
 ✔ async pipe @done(20-10-15 10:24)
-☐ TP clients (page list clients)
-  ☐ enum state-client
-  ☐ interface client-i
-  ☐ model (simple class) client (val par defaut state ACTIVE et tva 20)
-  ☐ clients-service
-  ☐ page-list-clients
-    ☐ ts recupérer notre collection
-    ☐ html : template-full-width, tableau-dark (name, totalHT, tva, total TTC (réutiliser le pipe total, réutiliser la directive StateDirective), state), text-bandeau, button (add)
-☐ formulaires
-☐ TP clients
+✔ TP clients (page list clients) @done(20-10-15 15:35)
+  ✔ enum state-client @done(20-10-15 15:35)
+  ✔ interface client-i @done(20-10-15 15:35)
+  ✔ model (simple class) client (val par defaut state ACTIVE et tva 20) @done(20-10-15 15:35)
+  ✔ clients-service @done(20-10-15 15:35)
+  ✔ page-list-clients @done(20-10-15 15:35)
+    ✔ ts recupérer notre collection @done(20-10-15 15:35)
+    ✔ html : template-full-width, tableau-dark (name, totalHT, tva, total TTC (réutiliser le pipe total, réutiliser la directive StateDirective), state), text-bandeau, button (add) @done(20-10-15 15:35)
+✔ formulaires @done(20-10-15 15:35)
+✔ TP clients @done(20-10-15 15:35)
+☐ Partie edit order
+  ☐ page list order html
+    ☐ afficher une colone supp (action) avec un icon edit devant chaque ligne (td)
+    ☐ click sur icon edit => goToEdit(item)
+  ☐ page list order ts
+    ☐ coder fn goToEdit(item: Order) => redirection dans le ts vers la route orders/edit/1 (si id 1)
+  ☐ orders routing ts
+    ☐ route edit qui autorise un paramètre id dans l'url
+  ☐ page edit order ts
+    ☐ récupérer l'id dans l'url
+    ☐ appeler this.os.getItemById(id) et faire le subscribe
+    ☐ dans le subscribe on récupère la res de l'api (l'item qui correspond à l'id) et on initialise une propriété item avec cet obj
+  ☐ page edit order html
+    ☐ afficher form order component et on bind l'input init avec item quand il a une valeur
+    ☐ l'output submited appel une fn edit($event)
+  ☐ page edit order ts
+    ☐ code la fn edit(item: Order) => this.os.update(item).subscribe()
+    ☐ dans le subscribe, on redirige l'utilisateur vers la route orders
+
+
 ☐ emargement et evals formateur
 ☐ Atelier : Subject, BehaviorSubject, EditComponent, Fonction delete

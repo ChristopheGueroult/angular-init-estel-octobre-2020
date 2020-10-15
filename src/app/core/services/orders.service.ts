@@ -37,6 +37,18 @@ export class OrdersService {
     return this.http.put<Order>(`${this.urlApi}/orders/${item.id}`, item);
   }
 
+  /**
+   * Add an item in collection with http
+   * How to subscribe to this method
+   * @example
+   * this.os.add.subscribe((res)=> {});
+   *
+   * @return - return an Observable<Order>
+   */
+  public add(item: Order): Observable<Order> {
+    return this.http.post<Order>(`${this.urlApi}/orders`, item);
+  }
+
   // delete item in collection
 
   // get item by id
